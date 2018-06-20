@@ -15,7 +15,7 @@ public class webScraper {
 		String content;
 		try {
 			content = URLConnectionReader.getText("https://en.wikipedia.org/wiki/\"Hello,_World!\"_program");
-			content=new org.jsoup.examples.HtmlToPlainText().getPlainText(Jsoup.parse(content));
+			content=new org.jsoup.examples.W3CDom.asString(Jsoup.parse(content));
 			System.out.print(content);	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
